@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <!-- boxicons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- style file -->
+    <link rel="stylesheet" href="css/memory_game.css">
+    <title>Memory Game</title>
+  </head>
+  <body>
+
+    <!-- splash screen -->
+    <div class="control-buttons">
+      <span>Start Game</span>
+    </div>
+
+    <!-- time out screen -->
+    <div class="time-out">
+      <span>
+        <h1>Sorry! Time out <i class='bx bx-sad bx-tada' ></i></h1>
+        <button class="reload" type="button" id="reload">Restart</button>
+      </span>
+    </div>
+
+    <!-- success screen -->
+    <div class="success">
+      <span>
+        <img src="imgs\Celebration.gif" alt="">
+        <button class="reload" type="button" id="reload1">Restart</button>
+      </span>
+    </div>
+
+    <div class="info-container">
+      <div class="name">
+        Hello: <span></span>
+      </div>
+      <div class="tries">
+        Wrong tries: <span>0</span>
+      </div>
+      <div class="countdown">
+        Time: <span id="countdown"></span>
+      </div>
+    </div>
+
+    <div class="memory-game-blocks">
+
+      <!-- img1 -->
+      <div class="game-block" data-technology="img1">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img1.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img1">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img1.png" alt="">
+        </div>
+      </div>
+
+      <!-- img2 -->
+      <div class="game-block" data-technology="img2">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img2.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img2">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img2.png" alt="">
+        </div>
+      </div>
+
+      <!-- img3 -->
+      <div class="game-block" data-technology="img3">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img3.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img3">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img3.png" alt="">
+        </div>
+      </div>
+
+      <!-- img4 -->
+      <div class="game-block" data-technology="img4">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img4.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img4">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img4.png" alt="">
+        </div>
+      </div>
+
+      <!-- img5 -->
+      <div class="game-block" data-technology="img5">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img5.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img5">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img5.png" alt="">
+        </div>
+      </div>
+
+      <!-- img6 -->
+      <div class="game-block" data-technology="img6">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img6.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img6">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img6.png" alt="">
+        </div>
+      </div>
+
+      <!-- img7 -->
+      <div class="game-block" data-technology="img7">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img7.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img7">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img7.png" alt="">
+        </div>
+      </div>
+
+      <!-- img8 -->
+      <div class="game-block" data-technology="img8">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img8.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img8">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img8.png" alt="">
+        </div>
+      </div>
+
+      <!-- img9 -->
+      <div class="game-block" data-technology="img9">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img9.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img9">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img9.png" alt="">
+        </div>
+      </div>
+
+      <!-- img10 -->
+      <div class="game-block" data-technology="img10">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img10.png" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="img10">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs\img10.png" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <audio id="music" src="audio\music.mp3"></audio>
+    <audio id="success" src="audio\Success.mp3" preload="auto"></audio>
+    <audio id="fail" src="audio\fail.mp3" preload="auto"></audio>
+    <audio id="clap" src="audio\clap.mp3"></audio>
+    <audio id="whistle" src="audio\Warning-whistle.mp3"></audio>
+
+    <script src="js\memory_game.js" type="text/javascript"></script>
+  </body>
+</html>
